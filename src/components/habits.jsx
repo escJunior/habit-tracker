@@ -11,15 +11,23 @@ class Habits extends Component {
   };
 
   handleIncremnet = (habit) => {
-    console.log(`handleIncrement ${habit}`);
+    const habits = [...this.state.habits];
+    const index = habits.indexOf(habit);
+    habits[index].count++;
+    this.setState({ habits }); // key, value 가 이름이 동일하면 하나로 생략가능
   };
 
   handleDecremnet = (habit) => {
-    console.log(`handleDecrement ${habit}`);
+    const habits = [...this.state.habits];
+    const index = habits.indexOf(habit);
+    const count = habits[index].count - 1;
+    habits[index].count = count < 0 ? 0 : count;
+    this.setState({ habits }); // key, value 가 이름이 동일하면 하나로 생략가능
   };
 
   handleDelete = (habit) => {
-    console.log(`handleDelete ${habit}`);
+    const habits = this.state.habits.filter((item) => item.id !== habit.id);
+    this.setState({ habits });
   };
 
   render() {
