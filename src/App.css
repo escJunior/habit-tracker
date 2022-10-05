@@ -8,6 +8,10 @@ button {
   cursor: pointer;
 }
 
+ul {
+  padding-left: 0em;
+}
+
 .navbar {
   font-size: 2rem;
   padding: 1em;
@@ -34,6 +38,8 @@ button {
 
 .add-input {
   font-size: 2rem;
+  margin-top: 00.2em;
+  margin-left: 00.2em;
   margin-right: 00.2em;
 }
 
@@ -83,4 +89,12 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
+}
+
+.habits-reset {
+  font-size: 1.5rem;
+  padding: 0.2em 1em;
+  margin-left: 00.2em;
+  background-color: green;
+  color: white;
 }
